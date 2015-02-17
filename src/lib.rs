@@ -40,6 +40,24 @@
 //! ```rust
 //! #[macro_use] extern crate var;
 //!
+//! # fn main() {
+//! var! {
+//!     a = 1,
+//!     b: &str = "foo",
+//!     c = 3.0,
+//! }
+//!
+//! a += 1;
+//! b = "bar";
+//! c *= 7.0;
+//! # }
+//! ```
+//!
+//! Generating Fibonacci numbers with a loop:
+//!
+//! ```rust
+//! #[macro_use] extern crate var;
+//!
 //! fn fibonacci(n: u32) -> u64 {
 //!     var! {
 //!         a: u64 = 0,
