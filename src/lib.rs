@@ -5,7 +5,8 @@
 //! initialised at once, inspired by the keyword of the same name in
 //! languages like Nim and C#.
 //!
-//! [Available on crates.io](https://crates.io/crates/var)
+//! [Available on
+//! crates.io](https://crates.io/crates/var). [Source](https://github.com/huonw/var).
 //!
 //! # Grammar
 //!
