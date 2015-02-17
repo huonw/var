@@ -1,0 +1,9 @@
+language: rust
+sudo: false
+env:
+  global:
+  - secure: UOXxnRnmG/trSpWW6SjiLLdNdYQdpZ1R31WUPSoPLiOo3iZa7c79wTrlIoMI0TpEj732jD3+G1bgm89BIk344lwTyQATQvKeJXSey3sf9W6aUXEwyevwJBtkJejEZ3UXUVmosCjrXUw9GpwN0Tu72KCJEZxSV0Ov1fBJ3Q7EiRo=
+script:
+- cargo build --verbose && cargo test --verbose && cargo doc --verbose
+after_success:
+- test "$TRAVIS_PULL_REQUEST" == false && test "$TRAVIS_BRANCH" == "master" && bash deploy-docs.sh
