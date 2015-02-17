@@ -1,0 +1,16 @@
+[package]
+
+name = "var"
+version = "0.0.1"
+authors = ["Huon Wilson <dbau.pp@gmail.com>"]
+
+homepage = "https://github.com/huonw/var"
+repository = "https://github.com/huonw/var"
+documentation = "http://huonw.github.io/var/var/"
+license = "MIT/Apache-2.0"
+keywords = ["macro"]
+readme = "README.md"
+description = """
+A macro that allows declaring and initialising multiple mutable
+variables in a single statement.
+"""
