@@ -8,48 +8,6 @@
 //! [Available on
 //! crates.io](https://crates.io/crates/var). [Source](https://github.com/huonw/var).
 //!
-//! # Examples
-//!
-//! ```rust
-//! #[macro_use] extern crate var;
-//!
-//! # fn main() {
-//! var! {
-//!     a = 1,
-//!     // types are allowed
-//!     b: &str = "foo",
-//!     c = 3.0, // trailing comma is legal (but not required)
-//! }
-//!
-//! a += 1;
-//! b = "bar";
-//! c *= 7.0;
-//! # }
-//! ```
-//!
-//! Generating Fibonacci numbers with a loop:
-//!
-//! ```rust
-//! #[macro_use] extern crate var;
-//!
-//! fn fibonacci(n: u32) -> u64 {
-//!     var! {
-//!         a: u64 = 0,
-//!         b = 1
-//!     }
-//!     for _ in 0..n {
-//!         let tmp = a + b;
-//!         a = b;
-//!         b = tmp;
-//!     }
-//!     return a
-//! }
-//!
-//! fn main() {
-//!     assert_eq!(fibonacci(10), 55);
-//! }
-//! ```
-//!
 //! # Grammar
 //!
 //! ```not_rust
@@ -76,6 +34,47 @@
 //!   statement),
 //! - an initialising expression is required, unlike conventional `let`,
 //! - pattern matching cannot be performed.
+//!
+//! # Examples
+//!
+//! ```rust
+//! #[macro_use] extern crate var;
+//!
+//! # fn main() {
+//! var! {
+//!     a = 1,
+//!     b: &str = "foo",
+//!     c = 3.0,
+//! }
+//!
+//! a += 1;
+//! b = "bar";
+//! c *= 7.0;
+//! # }
+//! ```
+//!
+//! Generating Fibonacci numbers with a loop:
+//!
+//! ```rust
+//! #[macro_use] extern crate var;
+//!
+//! fn fibonacci(n: u32) -> u64 {
+//!     var! {
+//!         a: u64 = 0,
+//!         b = 1,
+//!     }
+//!     for _ in 0..n {
+//!         let tmp = a + b;
+//!         a = b;
+//!         b = tmp;
+//!     }
+//!     return a
+//! }
+//!
+//! fn main() {
+//!     assert_eq!(fibonacci(10), 55);
+//! }
+//! ```
 
 /// The main macro, see crate docs for details.
 #[macro_export]
