@@ -14,3 +14,6 @@ description = """
 A macro that allows declaring and initialising multiple mutable
 variables in a single statement.
 """
+
+[features]
+unstable = []
