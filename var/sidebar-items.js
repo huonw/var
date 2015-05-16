@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["__var_internals!","Implementation details. **Do not use this directly.**"],["var!","The main macro, see crate docs for details."]]});
